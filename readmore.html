@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="readmore.css" rel="stylesheet" />
+    <title>Readmore View</title>
+
+    <script>
+        function view() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+                xhttp = new XMLHttpRequest();
+            } else {
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    const item = xhttp.responseText;
+                    const data = JSON.parse(item);
+                    document.getElementById("t20").innerHTML = data[0].Emailid;
+                    document.getElementById("t1").innerHTML = data[0].CompanyName;
+                    document.getElementById("t2").innerHTML = data[0].Country;
+                    document.getElementById("t3").innerHTML = data[0].City;
+                    document.getElementById("t4").innerHTML = data[0].State;
+                    document.getElementById("t5").innerHTML = data[0].Pincode;
+                    document.getElementById("t6").innerHTML = data[0].Jobtitle;
+                    document.getElementById("t7").innerHTML = data[0].Vacancy;
+                    document.getElementById("t8").innerHTML = data[0].Openingdate;
+                    document.getElementById("t9").innerHTML = data[0].Closingdate;
+                    document.getElementById("t10").innerHTML = data[0].Qualification;
+                    document.getElementById("t11").innerHTML = data[0].Highschool;
+                    document.getElementById("t12").innerHTML = data[0].Intermidiate;
+                    document.getElementById("t13").innerHTML = data[0].Graduation;
+                    document.getElementById("t14").innerHTML = data[0].AnyOther;
+                    document.getElementById("t15").innerHTML = data[0].Skill;
+                    document.getElementById("t16").innerHTML = data[0].WorkEx;
+                    document.getElementById("t17").innerHTML = data[0].Jobtype;
+                    document.getElementById("t18").innerHTML = data[0].Launguage;
+                    document.getElementById("t19").innerHTML = data[0].Paytype;
+                }
+            }
+
+            xhttp.open("GET", "merge.json", true);
+
+            xhttp.send();
+        }
+    </script>
+</head>
+
+<body onload="view()">
+    <div id="header">
+        <h1>Jobseeker</h1>
+        <div id="ho"><a href="index.html">Home</a><a href="#">Menu</a><a href="#">About</a><a href="#">Service</a><a
+                href="#">Contact</a><a href="#"> </a></div>
+    </div>
+    <div id="maindiv">
+        <div id="border">
+            <div id="sm"></div>
+            <div id="small">  <a href="AfterloginJobseeker.html"><b class="b">My Profile</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="jobseekerupdate.html" ><b class="b">Edit Profile</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="searchnewjob.html"><b class="b">Search New Job</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="myjob.html"><b class="b">My Job</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="#" ><b class="b">Notification</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="#" ><b class="b">Menu1</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="#" ><b class="b">Menu2</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="index.html" ><b class="b">Logout</b></a></div>
+            <div id="sm"></div>
+        </div>
+        <div id="rightt">
+            
+    
+            <h1 style="margin-top: 100px; margin-left: 40%; text-decoration: none; display: inline;">Full Details Of Job</h1>
+
+               <div id="det">
+                           <table>
+                                 <tr>
+                                    
+                                    <td class="p">Emailid</td> 
+                                    <td class="t" id="t20" name="t20"></td>
+
+                                    <td class="p">CompanyName<td> 
+                                    <td class="t" id="t1" name="t1"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p">Country</td> 
+                                    <td class="t" id="t2" name="t2"></td>
+                                
+                                    <td class="p">City</td> 
+                                    <td class="t" id="t3" name="t3"></td>
+
+                                </tr>
+                                <tr>
+                                    <td class="p">State</td> 
+                                    <td class="t" id="t4" name="t4"></td>
+                                
+                                    <td class="p">Pincode</td> 
+                                    <td class="t" id="t5" name="t5"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p">Jobtitle</td> 
+                                    <td class="t" id="t6" name="t6"></td>
+                                
+                                    <td class="p">Vacancy</td> 
+                                    <td class="t" id="t7" name="t7"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p">Openingdate</td> 
+                                    <td class="t" id="t8" name="t8"></td>
+                                
+                                    <td class="p">Closingdate</td> 
+                                    <td class="t" id="t9" name="t9"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p">Qualification</td> 
+                                    <td class="t" id="t10" name="t10"></td>
+                               
+                                    <td class="p">Highschool</td> 
+                                    <td class="t" id="t11" name="t11"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p">Intermidiate</td> 
+                                    <td class="t" id="t12" name="t12"></td>
+                               
+                                    <td class="p">Graduation</td> 
+                                    <td class="t" id="t13" name="t13"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p">AnyOther</td> 
+                                    <td class="t" id="t14" name="t14"></td>
+                                
+                                    <td class="p">Skill</td> 
+                                    <td class="t" id="t15" name="t15"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p">WorkEx</td> 
+                                    <td class="t" id="t16" name="t16"></td>
+                              
+                                    <td class="p">Jobtype</td> 
+                                    <td class="t" id="t17" name="t17"></td>
+                               </tr>
+                                <tr>
+                                    <td class="p">Launguage</td> 
+                                    <td class="t" id="t18" name="t18"></td>
+                                
+                                    <td class="p">Paytype</td> 
+                                    <td class="t" id="t19" name="t19"></td>
+                                
+                                </tr>
+                              
+                      </table>
+                                 <pre><a href="applyjob.html"><input class="tq"  type="submit" value="Apply Job"></a></pre>
+               </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="div1">Company
+            <span id="c">
+                <li><a href="#" id="c">About Us</a></li>
+                <li><a href="#" id="c">Contact</a></li>
+                <li><a href="#" id="c">Reservation</a></li>
+                <li><a href="#" id="c">Terms & Condation</a>
+                </li>
+        </div>
+        <div id="div2">Contact
+            <span id="co">
+                <li>123 et, New York, USA</li>
+                <li>+012 345 67890</li>
+                <li>info@example.com</li>
+            </span>
+        </div>
+        <div id="div3">Opening
+            <span id="op">
+                <li>Monday - Saturday</li>
+                <li>09AM - 09PM</li>
+                <li>Sunday</li>
+                <li>10AM - 08PM</li>
+            </span>
+        </div>
+        <div id="div4">Newsletter
+            <span id="ne"><br>Dolor amet sit justo amet elclita ipsum elest.</span>
+            <br>
+            <input class="p" type="email" placeholder="Enter the Email" id="fo">
+            <input class="p" type="submit" id="sub">
+        </div>
+    </div>
+</body>
+
+</html>

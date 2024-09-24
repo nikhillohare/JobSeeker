@@ -1,0 +1,219 @@
+#header{
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    background-color:rgb(29, 29, 86);
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+#maindiv{
+    position: relative;
+    height:900px;
+    width: 100%;
+    background-color: rgb(191, 174, 174);
+    align-items: center;
+    display: flex;
+}
+.hy{
+    position: relative;
+    height: 200px;
+    width: 80%;
+    border: 2px solid black;
+    margin-top: 200px;
+}
+.b
+{
+    position: relative;
+    text-decoration: none;
+    top: 10px;
+    font-size:large;
+    color: white;
+}
+.b:hover
+{
+    position: relative;
+    text-decoration: none;
+    top: 10px;
+    font-size:large;
+    color:rgba(240, 56, 19, 0.944)
+}
+#border{
+    position: relative;
+    height: 700px;
+    width:20%;
+    border-radius: 9px;
+    border: 2px solid white;
+    margin-top: 100px;
+    left: 10px;
+    background-color:rgb(29, 29, 86);
+}
+#sm
+{
+    position: relative;
+    height:2px;
+    width: auto;
+    background-color: antiquewhite;
+}
+#small
+{
+    position: relative;
+    height:35px;
+    width: auto;
+}
+#small:hover
+{
+    position: relative;
+    height:35px;
+    width: auto;
+    background-color:rgb(103, 107, 214);
+    z-index: 0;
+}
+#border1{
+    position: relative;
+    height: 700px;
+    width: 70%;
+    border-radius: 9px;
+    border: 2px solid white;
+    margin-top: 100px;
+    left: 30px;
+    background-color:gray;
+}
+#tablename
+{
+    position: relative;
+    height: 30px;
+    width:98%;
+    border-radius: 9px;
+    border: 2px solid white;
+    margin-top: 20px;
+    left: 10px;
+}
+#delete
+{
+    position: relative;
+    height: 80px;
+    width:98%;
+    border-radius: 9px;
+    border: 2px solid white;
+    margin-top: 10px;
+    left: 10px;
+    
+}
+.d
+{
+    color:black;
+    font-size: x-large;
+    
+}
+.tex
+{
+ font-weight: bold;
+ color: white;
+}
+input
+{
+    border-radius: 4px;
+}
+a{
+    text-decoration: none;
+    margin-left: 20px;
+    color:white;
+}
+a:hover{
+    text-decoration: none;
+    margin-left: 20px;
+    color: orange;
+}
+#ho{
+    margin-left:  500px;
+    font-size: large;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: -50px;
+}
+h1{
+    width: 190px;
+    margin-left: 50px;
+
+}
+
+#footer{
+    height: 380px;
+    width: 100%;
+    background-color:rgb(29, 29, 86);
+    display:flex;
+}
+#div1{
+    height: 300px;
+    width: 25%;
+    font-size: xx-large;
+    margin-top: 50px;
+    color: yellow;
+}
+#div2{
+    height: 300px;
+    width: 25%;
+    font-size: xx-large;
+    margin-top: 50px;
+    color: yellow;
+}
+#div3{
+    height: 300px;
+    width: 25%;
+    font-size: xx-large;
+    margin-top: 50px;
+    color: yellow;
+}
+#div4{
+    height: 300px;
+    width: 25%;
+    font-size: xx-large;
+    margin-top: 50px;
+    color: yellow;
+}
+#c{
+    display: inline;
+    width: 20px;
+    height: 20px;
+    font-size:x-large;
+    margin-top: 40px;
+    color: white;
+}
+#co{
+    display: inline;
+    width: 20px;
+    height: 20px;
+    font-size:x-large;
+    margin-top: 40px;
+    color: white;
+}
+#op{
+    display: inline;
+    width: 20px;
+    height: 20px;
+    font-size:x-large;
+    margin-top: 40px;
+    color: white;
+}
+#ne{
+    font-size: x-large;
+    color: white;
+    margin-top: 50px;
+}
+#fo{
+    font-size: large;
+    height: 40px;
+    width: 350px;
+    margin-top: 25px;
+    border-radius: 4px;
+}
+#sub{
+    background-color: rgb(71, 50, 162);
+    height: 40px;
+    width: 350px;
+    font-size: large;
+    border-radius: 3px;
+    color: black;
+    margin-left: 3px;
+}

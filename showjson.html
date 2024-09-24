@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON SHOW</title>
+</head>
+<script>
+    function profiledata() {
+        var xhttp;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.onreadystatechange = function () {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                const item = xhttp.responseText;
+                const data = JSON.parse(item);
+
+
+                document.getElementById("c1").innerHTML=data[0].userName
+            }
+        }
+        xhttp.open("GET", "profile.json", true);
+        xhttp.send();
+    }
+</script>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+    <link href="angularcreate.css" rel="stylesheet">
+</head>
+<body ng-app="ngAnimate">
+    <div id="header">
+      <div id="ho">
+        <a href="#">HOME</a>
+        <a href="#">MENU</a>
+        <a href="#">ABOUT</a>
+        <a href="#">SERVICE</a>
+        <a href="#">CONTACT US</a>
+      </div>
+    </div>
+    <div id="Main">
+
+    <center>
+      <form action="/angularcreate" get="post">
+        <div id="div" ng-hide="myChk" >
+          <h1>Create Account Page:<input type="checkbox" ng-model="myChk"></h1>
+           <table>
+            <tr><td><labe style="font-weight: bold;">Enter First Name </label></td><td><input type="text" id="t1" name="t1"></td></tr>
+            <tr><td><labe style="font-weight: bold;">Enter Last Name </label></td><td><input type="text" id="t2" name="t2"></td></tr>
+            <tr><td><labe style="font-weight: bold;">Create user id </label></td><td><input type="text" id="t3" name="t3"></td></tr>
+            <tr><td><label style="font-weight: bold;">Enter password</label></td><td><input type="password" id="t4" name="t4"></td></tr>
+            <tr><td><label style="font-weight: bold;">Re-enter password</label></td><td><input type="password" id="t5" name="t5"></td></tr>
+            <tr><td></td><td><input type="submit"></td></tr>
+        </table>
+         </div>
+      </form>
+      </center>
+      
+    </div>
+    <div id="footer">
+      <div id="div1">Company
+          <span id="c">
+          <li><a href="#" id="c">About Us</a></li>
+          <li><a href="#" id="c">Contact</a></li>
+          <li><a href="#" id="c">Reservation</a></li>
+          <li><a href="#" id="c">Terms & Condation</a></li>
+          </span>
+      </div>
+      <div id="div2">Contact
+          <span id="co">
+          <li>123 Street, New York, USA</li>
+          <li>+012 345 67890</li>
+          <li>info@example.com</li>
+          </span>
+      </div>
+      <div id="div3">Opening
+          <span id="op">
+          <li>Monday - Saturday</li>
+          <li>09AM - 09PM</li>
+          <li>Sunday</li>
+          <li>10AM - 08PM</li>
+          </span>
+      </div>
+      <div id="div4">Newsletter
+          <span id="ne"><br>Dolor amet sit justo amet elitr clita ipsum elitr est.</span>
+          <br>
+          <input type="email" placeholder="Enter the Email" id="fo">
+          <input type="submit" id="sub">
+      </div>
+    </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,228 @@
+#header{
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    background-color:rgb(29, 29, 86);
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+#in{
+    height: 600px;
+    width: 500px;
+    margin-top: 45px;
+    margin-left: 200px;
+    border: 1px solid white;
+    border-radius: 9px;
+    background-color:rgb(29, 29, 86);
+}
+.my{
+    text-decoration: none;
+    margin-left: 150px; 
+    color: white;
+}
+.my:hover{
+    text-decoration: none;
+    margin-left: 150px; 
+    color:red;
+}
+#maindiv{
+    position: relative;
+    height:1000px;
+    width: 100%;
+    background-color: rgb(191, 174, 174);
+    align-items: center;
+    display: flex;
+}
+#panel
+{
+    position: relative;
+    height: 800px;
+    width:20%;
+    border-radius: 9px;
+    border: 2px solid white;
+    margin-top: 60px;
+    left: 10px;
+    background-color:rgb(29, 29, 86);
+
+}
+#right
+{
+    position: relative;
+    height:800px;
+    width: 70%;
+    border-radius: 9px;
+    border: 4px solid white;
+    margin-left: 100px;
+    margin-top: 60px;
+    
+}
+#companydetails
+{
+    position: relative;
+    height: 25px;
+    width: auto;
+    top: 20px;
+    border-radius: 8px;
+    font-size: larger;
+    color: white;
+    border: 3px solid black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.cd{
+    position: relative;
+    height: 20px;
+    width: auto;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+a{
+    text-decoration: none;
+    margin-left: 20px;
+    color:white;
+}
+a:hover{
+    text-decoration: none;
+    margin-left: 20px;
+    color: orange;
+}
+#ho{
+    margin-left: 780px;
+    font-size: xx-large;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: -50px;
+}
+h1{
+    width: 190px;
+    margin-left: 50px;
+
+}
+
+#footer{
+    height: 380px;
+    width: 100%;
+    background-color:rgb(29, 29, 86);
+    display:flex;
+}
+#div1{
+    height: 300px;
+    width: 25%;
+    font-size: xx-large;
+    margin-top: 50px;
+    color: yellow;
+}
+#div2{
+    height: 300px;
+    width: 25%;
+    font-size: xx-large;
+    margin-top: 50px;
+    color: yellow;
+}
+#div3{
+    height: 300px;
+    width: 25%;
+    font-size: xx-large;
+    margin-top: 50px;
+    color: yellow;
+}
+#div4{
+    height: 300px;
+    width: 25%;
+    font-size: xx-large;
+    margin-top: 50px;
+    color: yellow;
+}
+#c{
+    display: inline;
+    width: 20px;
+    height: 20px;
+    font-size:x-large;
+    margin-top: 40px;
+    color: white;
+}
+#co{
+    display: inline;
+    width: 20px;
+    height: 20px;
+    font-size:x-large;
+    margin-top: 40px;
+    color: white;
+}
+#op{
+    display: inline;
+    width: 20px;
+    height: 20px;
+    font-size:x-large;
+    margin-top: 40px;
+    color: white;
+}
+#ne{
+    font-size: x-large;
+    color: white;
+    margin-top: 50px;
+}
+#fo{
+    font-size: large;
+    height: 40px;
+    width: 350px;
+    margin-top: 25px;
+    border-radius: 4px;
+}
+#sub{
+    background-color: rgb(71, 50, 162);
+    height: 40px;
+    width: 350px;
+    font-size: large;
+    border-radius: 3px;
+    color: black;
+    margin-left: 3px;
+}
+input
+{
+    border-radius: 5px;
+}
+
+#small
+{
+    position: relative;
+    height:35px;
+    width: auto;
+}
+#small:hover
+{
+    position: relative;
+    height:35px;
+    width: auto;
+    background-color:rgb(6, 101, 174);
+    z-index: 0;
+}
+
+#sm
+{
+    position: relative;
+    height:2px;
+    width: auto;
+    background-color: antiquewhite;
+}
+.jds
+{
+    position: relative;
+    height:20px;
+    width: auto;
+    background-color: rgb(221, 250, 215);
+}
+.b
+{
+    position: relative;
+    text-decoration: none;
+    top: 10px;
+    font-size:large;
+    color: white;
+}
+.trr
+{
+    position: relative;
+    margin-left: 50px;
+    color: white;
+}

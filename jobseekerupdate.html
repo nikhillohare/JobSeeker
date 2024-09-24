@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="jobseekerupdate.css" rel="stylesheet" />
+    <title>jobseeker Update</title>
+    <script>
+        function job() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+                xhttp = new XMLHttpRequest();
+            } else {
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    const item = xhttp.responseText;
+                    const data = JSON.parse(item);
+                    let text = "";
+
+                    document.getElementById("t1").value = data[0].Name;
+                    document.getElementById("t2").value = data[0].Emailid;
+                    document.getElementById("t3").value = data[0].Mobile;
+                    document.getElementById("t4").value = data[0].DateofBirth;
+                    document.getElementById("t5").value = data[0].Gender;
+                    document.getElementById("t6").value = data[0].Maritial;
+                    let m1 = data[0].MaritialStatus;
+                    if (m1 == "single") {
+                        text = "<select><option>single</option><option>married</option></select>";
+
+                    }
+                    else {
+                        text = "<select><option>married</option><option>single</option></select>";
+                    }
+                    document.getElementById("t6").innerHTML = text;
+                    document.getElementById("t7").value = data[0].CurrentLocation;
+                    document.getElementById("t8").value = data[0].HomeTown;
+                    document.getElementById("t9").value = data[0].PermanentAddress;
+                    document.getElementById("t10").value = data[0].Pincode;
+                    document.getElementById("t11").value = data[0].Keyskill;
+
+                    document.getElementById("t13").value = data[0].Highschool;
+                    document.getElementById("t14").value = data[0].Board1;
+                    let c1 = data[0].Board1;
+                    if (c1 == "Uttranchal Board") {
+                        text = "<select><option>Uttranchal Board</option><option>UP Board</option><option>Mp Board</option><option>Maharastra Board</option></select>";
+
+                    }
+                    else if (c1 == "UP Board") {
+                        text = "<select><option>UP Board</option><option>Mp Board</option><option>Maharastra Board</option><option>Uttranchal Board</option></select>";
+
+                    }
+                    else if (c1 == "Mp Board") {
+                        text = "<select><option>Mp Board</option><option>Maharastra Board</option><option>Uttranchal Board</option><option>UP Board</option></select>";
+
+                    }
+                    else {
+                        text = "<select><option>Maharastra Board</option><option>Uttranchal Board</option><option>UP Board</option><option>Mp Board</option></select>";
+
+                    }
+                    document.getElementById("t14").innerHTML = text;
+                    document.getElementById("t15").value = data[0].Year1;
+                    document.getElementById("t16").value = data[0].Intermediate;
+                    document.getElementById("t17").value = data[0].Board2;
+                    let r1 = data[0].Board1;
+                    if (r1 == "Uttranchal Board") {
+                        text = "<select><option>Uttranchal Board</option><option>UP Board</option><option>Mp Board</option><option>Maharastra Board</option></select>";
+
+                    }
+                    else if (r1 == "UP Board") {
+                        text = "<select><option>UP Board</option><option>Mp Board</option><option>Maharastra Board</option><option>Uttranchal Board</option></select>";
+
+                    }
+                    else if (r1 == "Mp Board") {
+                        text = "<select><option>Mp Board</option><option>Maharastra Board</option><option>Uttranchal Board</option><option>UP Board</option></select>";
+
+                    }
+                    else {
+                        text = "<select><option>Maharastra Board</option><option>Uttranchal Board</option><option>UP Board</option><option>Mp Board</option></select>";
+
+                    }
+                    document.getElementById("t17").innerHTML = text;
+                    document.getElementById("t18").value = data[0].Year2;
+                    document.getElementById("t19").value = data[0].Graduation;
+                    document.getElementById("t20").value = data[0].University1;
+                    document.getElementById("t21").value = data[0].Year3;
+                    document.getElementById("t22").value = data[0].Masters;
+                    document.getElementById("t23").value = data[0].University2;
+                    document.getElementById("t24").value = data[0].Year4;
+                    document.getElementById("t25").value = data[0].Phd;
+                    document.getElementById("t26").value = data[0].University3;
+                    document.getElementById("t27").value = data[0].Year5;
+                    document.getElementById("t28").value = data[0].Diploma;
+                    document.getElementById("t29").value = data[0].University4;
+                    document.getElementById("t30").value = data[0].Year6;
+                    document.getElementById("t31").value = data[0].Certification;
+                    document.getElementById("t32").value = data[0].Company1;
+                    document.getElementById("t33").value = data[0].Job1;
+                    document.getElementById("t34").value = data[0].Form1;
+                    document.getElementById("t35").value = data[0].To1;
+                    document.getElementById("t36").value = data[0].Exp1;
+                    document.getElementById("t37").value = data[0].Company2;
+                    document.getElementById("t38").value = data[0].Job2;
+                    document.getElementById("t39").value = data[0].Form2;
+                    document.getElementById("t40").value = data[0].To2;
+                    document.getElementById("t41").value = data[0].Exp2;
+                    document.getElementById("t42").value = data[0].Company3;
+                    document.getElementById("t43").value = data[0].Job3;
+                    document.getElementById("t44").value = data[0].Form3;
+                    document.getElementById("t45").value = data[0].To3;
+                    document.getElementById("t46").value = data[0].Exp3;
+                    document.getElementById("t47").value = data[0].Company4;
+                    document.getElementById("t48").value = data[0].Job4;
+                    document.getElementById("t49").value = data[0].Form4;
+                    document.getElementById("t50").value = data[0].To4;
+                    document.getElementById("t51").value = data[0].Exp4;
+                    document.getElementById("t52").value = data[0].Language1;
+                    document.getElementById("t53").value = data[0].Language2;
+                    document.getElementById("t54").value = data[0].Language3;
+                    document.getElementById("t55").value = data[0].JobType;
+                    let a1 = data[0].JobType;
+                    if (a1 == "Permanent") {
+                        text = "<select><option>Permanent</option><option>Temporary</option></select>";
+
+                    }
+                    else {
+                        text = "<select><option>Temporary</option><option>Permanent</option></select>";
+                    }
+                    document.getElementById("t55").innerHTML = text;
+                    document.getElementById("t56").value = data[0].Employment;
+                    let a2 = data[0].Employment;
+                    if (a2 == "Fulltime") {
+                        text = "<select><option>Fulltime</option><option>Parttime</option></select>";
+
+                    }
+                    else {
+                        text = "<select><option>Parttime</option><option>Fulltime</option></select>";
+                    }
+                    document.getElementById("t56").innerHTML = text;
+                    document.getElementById("t57").value = data[0].Category;
+                    let a3 = data[0].Employment;
+                    if (a3 == "Fulltime") {
+                        text = "<select><option>Fulltime</option><option>Parttime</option></select>";
+
+                    }
+                    else {
+                        text = "<select><option>Parttime</option><option>Fulltime</option></select>";
+                    }
+                    document.getElementById("t57").innerHTML = text;
+
+                }
+            }
+            xhttp.open("GET", "jobseekerafterlogin.json", true);
+            xhttp.send();
+        }
+    </script>
+
+</head>
+
+<body onload="job()">
+    <div id="header">
+        <h1>Jobseeker</h1>
+        <div id="ho"><a href="index.html">Home</a><a href="#">Menu</a><a href="#">About</a><a href="#">Service</a><a
+                href="#">Contact</a><a href="job">Login</a></div>
+    </div>
+    <div id="maindiv">
+        <div id="panel">
+            <div id="sm"></div>
+            <div id="small"> <a href="AfterloginJobseeker.html "><b class="b">My Profile</b></a></div>
+            <div id="sm"></div>
+            <div id="small"> <a href="jobseekerupdate.html"><b class="b">Edit Profile</b></a></div>
+            <div id="sm"></div>
+            <div id="small"> <a href="searchnewjob.html"><b class="b">Search New Job</b></a></div>
+            <div id="sm"></div>
+            <div id="small"> <a href="myjob.html"><b class="b">My Job</b></a></div>
+            <div id="sm"></div>
+            <div id="small"> <a href="#"><b class="b">Notification</b></a></div>
+            <div id="sm"></div>
+            <div id="small"> <a href="#"><b class="b">Menu1</b></a></div>
+            <div id="sm"></div>
+            <div id="small"> <a href="#"><b class="b">Menu2</b></a></div>
+            <div id="sm"></div>
+            <div id="small"> <a href="index.html"><b class="b">Logout</b></a></div>
+            <div id="sm"></div>
+
+        </div>
+
+
+        <div id="right">
+            <form action="/jsupdate" method="post">
+                <div id="companydetails">PERSONAL DETAILS</div>
+                <br>
+                <br>
+                <br>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" id="t1" name="t1"></td>
+                        <td>Email Id</td>
+                        <td><input type="text" id="t2" name="t2"></td>
+                        <td>Mobile No.</td>
+                        <td><input type="text" id="t3" name="t3"></td>
+                        <td>Date of birth</td>
+                        <td><input type="date" id="t4" name="t4"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td><input type="text" id="t5" name="t5"></td>
+                        <pre id="d1">
+                     <td>Maritial Status</td><td class="b"><select id="t6" name="t6"><option >single</option><option>married</option></select></option></td>
+                     </pre>
+                        <td>Current Location</td>
+                        <td><input type="text" id="t7" name="t7"></td>
+                        <td>Home Town</td>
+                        <td><input type="text" id="t8" name="t8"></td>
+                    </tr>
+                    <tr>
+                        <td>Permanent Address</td>
+                        <td><input type="text" id="t9" name="t9"></td>
+                        <td>Pincode
+                        <td><input type="text" id="t10" name="t10"></td>
+                        <td> Key Skill</td>
+                        <td><textarea name="Skill" rows="3" cols="15" id="t11" name="t11"></textarea></td>
+                        <td>Uplod Image</td>
+                        <td><input type="file" id="t12" name="t12"></td>
+
+                    </tr>
+
+                </table>
+
+                <div id="companydetails">EDUCATIONAL DETAILS</div>
+                <br>
+                <br>
+                <br>
+                <table>
+                    <tr>
+                        <td>Highschool Percentage</td>
+                        <td><input type="text" id="t13" name="t13"></td>
+                        <td>Board</td>
+                        <td>
+                            <select id="t14" name="t14">
+                                <option>Uttranchal Board</option>
+                                <option>UP Board</option>
+                                <option>Mp Board</option>
+                                <option>Maharastra Board</option>
+                            </select>
+                        </td>
+                        <td>Year</td>
+                        <td><input type="text" id="t15" name="t15"></td>
+                    </tr>
+                    <tr>
+                        <td>Intermediate Percentage</td>
+                        <td><input type="text" id="t16" name="t16"></td>
+                        <td>Board</td>
+                        <td>
+                            <select id="t17" name="t17">
+                                <option>Uttranchal Board</option>
+                                <option>UP Board</option>
+                                <option>Mp Board</option>
+                                <option>Maharastra Board</option>
+                            </select>
+                        </td>
+                        <td>Year</td>
+                        <td><input type="text" id="t18" name="t18"></td>
+                    </tr>
+                    <tr>
+                        <td>Graduation Percentage</td>
+                        <td><input type="text" id="t19" name="t19"></td>
+                        <td>University</td>
+                        <td><input type="text" id="t20" name="t20"></td>
+                        <td>Year</td>
+                        <td><input type="text" id="t21" name="t21"></td>
+                    </tr>
+                    <tr>
+                        <td>Masters Percentage</td>
+                        <td><input type="text" id="t22" name="t22"></td>
+                        <td>University</td>
+                        <td><input type="text" id="t23" name="t23"></td>
+                        <td>Year</td>
+                        <td><input type="text" id="t24" name="t24"></td>
+                    </tr>
+                    <tr>
+                        <td>Phd Percentage</td>
+                        <td><input type="text" id="t25" name="t25"></td>
+                        <td>University</td>
+                        <td><input type="text" id="t26" name="t26"></td>
+                        <td>Year</td>
+                        <td><input type="text" id="t27" name="t27"></td>
+                    </tr>
+                    <tr>
+                        <td>Diploma Percentage</td>
+                        <td><input type="text" id="t28" name="t28"></td>
+                        <td>University</td>
+                        <td><input type="text" id="t29" name="t29"></td>
+                        <td>Year</td>
+                        <td><input type="text" id="t30" name="t30"></td>
+                    </tr>
+                    <tr>
+                        <td>Certification</td>
+                        <td><input type="text" id="t31" name="t31"></td>
+                    </tr>
+                </table>
+
+                <div id="companydetails">WORK EXPERIANCE</div>
+                <br>
+                <br>
+                <br>
+                <table>
+                    <tr>
+                        <td>Company Name</td>
+                        <td><input type="text" id="t32" name="t32"></td>
+                        <td>Job title</td>
+                        <td><input type="text" id="t33" name="t33"></td>
+                        <td>Form</td>
+                        <td><select id="t34" name="t34">
+                                <option>Unbound</option>
+                                <option>Bound</option>
+                            </select></td>
+                        <td>To</td>
+                        <td><select id="t35" name="t35">
+                                <option>Unbound</option>
+                                <option>Bound</option>
+                            </select></td>
+                        <td>Exp</td>
+                        <td><select id="t36" name="t36">
+                                <option>Unbound</option>
+                                <option>Bound</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Company Name</td>
+                        <td><input type="text" id="t37" name="t37"></td>
+                        <td>Job title</td>
+                        <td><input type="text" id="t38" name="t38"></td>
+                        <td>Form</td>
+                        <td><select id="t39" name="t39">
+                                <option>Unbound</option>
+                                <option>Bound</option>
+                            </select></td>
+                        <td>To</td>
+                        <td><select id="t40" name="t40">
+                                <option>Unbound</option>
+                                <option>Bound</option>
+                            </select></td>
+                        <td>Exp</td>
+                        <td><select id="t41" name="t41">
+                                <option>Unbound</option>
+                                <option>Bound</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Company Name</td>
+                        <td><input type="text" id="t42" name="t42"></td>
+                        <td>Job title</td>
+                        <td><input type="text" id="t43" name="t43"></td>
+                        <td>Form</td>
+                        <td><select id="t44" name="t44">
+                                <option>Unbound</option>
+                                <option>Bound</option>
+                            </select></td>
+                        <td>To</td>
+                        <td><select id="t45" name="t45">
+                                <option>Unbound</option>
+                                <option>Bound</option>
+                            </select></td>
+                        <td>Exp</td>
+                        <td><select id="t46" name="t46">
+                                <option>Unbound</option>
+                                <option>Bound</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Company Name</td>
+                        <td><input type="text" id="t47" name="t47"></td>
+                        <td>Job title</td>
+                        <td><input type="text" id="t48" name="t48"></td>
+                        <td>Form</td>
+                        <td><select id="t49" name="t49">
+                                <option>Unbound</option>
+                                <option>Bound</option>
+                            </select></td>
+                        <td>To</td>
+                        <td><select id="t50" name="t50">
+                                <option>Unbound</option>
+                                <option>Bound</option>
+                            </select></td>
+                        <td>Exp</td>
+                        <td><select id="t51" name="t51">
+                                <option>Unbound</option>
+                                <option>Bound</option>
+                            </select></td>
+                    </tr>
+                </table>
+                <div id="companydetails">OTHER DETAILS</div>
+                <br>
+                <br>
+                <br>
+                <table>
+                    <tr>
+                        <td>Language</td>
+                        <td><input type="text" id="t52" name="t52"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="text" id="t53" name="t53"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="text" id="t54" name="t54"></td>
+                    </tr>
+                    <tr>
+                        <td>Job Type</td>
+                        <td><select id="t55" name="t55">
+                                <option>Permanent</option>
+                                <option>Temporary</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Employment Type</td>
+                        <td><select id="t56" name="t56">
+                                <option>Full Time</option>
+                                <option>Part Time</option>
+                            </select></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input class="bu" type="submit"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input class="bu" type="button" value="Cancel"></td>
+                    </tr>
+                    <tr>
+                        <td>Category</td>
+                        <td><select id="t57" name="t57">
+                                <option>General</option>
+                                <option>Manager</option>
+                                <option>Jr Engineer</option>
+                                <option>Sr Engineer</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="div1">Company
+            <span id="c">
+                <li><a href="#" id="c">About Us</a></li>
+                <li><a href="#" id="c">Contact</a></li>
+                <li><a href="#" id="c">Reservation</a></li>
+                <li><a href="#" id="c">Terms & Condation</a>
+                </li>
+        </div>
+        <div id="div2">Contact
+            <span id="co">
+                <li>123 Street, New York, USA</li>
+                <li>+012 345 67890</li>
+                <li>info@example.com</li>
+            </span>
+        </div>
+        <div id="div3">Opening
+            <span id="op">
+                <li>Monday - Saturday</li>
+                <li>09AM - 09PM</li>
+                <li>Sunday</li>
+                <li>10AM - 08PM</li>
+            </span>
+        </div>
+        <div id="div4">Newsletter
+            <span id="ne"><br>Dolor amet sit justo amet elitr clita ipsum elitr est.</span>
+            <br>
+            <input type="email" placeholder="Enter the Email" id="fo">
+            <input type="submit" id="sub">
+        </div>
+    </div>
+</body>
+
+</html>

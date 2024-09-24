@@ -1,0 +1,20 @@
+var a1=req.body.t1;
+            var a2=req.body.t2;
+            var a3=req.body.t3;
+            var a4=req.body.t4;
+            var a5=req.body.t5;
+            var a6=req.body.t6;
+            var a7=req.body.t7;
+            var a8=req.body.t8;
+            var a9=req.body.t9;
+            var a10=req.body.t10;
+            var a11=req.body.t11;
+            var a12=req.body.t12;
+            var a13=req.body.t13;
+            var a14=req.body.t14;
+            var a15=req.body.t15;
+            var a16=req.body.t16;
+            var a17=req.body.t17;
+            var a18=req.body.t18;
+            var a19=req.body.t19;
+//con.query("insert into newjobpost values('"+a1+"','"+a2+"','"+a3+"','"+a4+"','"+a5+"','"+a6+"','"+a7+"','"+a8+"','"+a9+"','"+a10+"','"+a11+"','"+a12+"','"+a13+"','"+a14+"','"+a15+"','"+a16+"','"+a17+"','"+a18+"','"+a19+"')",function(err,result)

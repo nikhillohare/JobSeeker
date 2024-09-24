@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="readmore.css" rel="stylesheet" />
+    <title>New Job details View</title>
+
+    <script>
+        function view() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+                xhttp = new XMLHttpRequest();
+            } else {
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    const item = xhttp.responseText;
+                    const data = JSON.parse(item);
+                    text = "";
+                    for (let x in data) {
+                        text = text + " <form action='/readmore' method='post'><hr><div style='height: 180px;float: left; background-color:white;width: 100%;display:flex;'><hr><div style='float: left; height: 180px; width: 20%; background-color:white;background-image: url(download.png));background-size:contain;background-repeat: no-repeat;size: full;object-fit: contain; '></div><hr><div style='width: 100%; height: 180PX;'><h2 style='background-color:white;left: 35px;position: relative; text:gray-900'>" + data[x].CompanyName + "</h2><li style='font-family: popins,sans-serif;left: 20px;top:20px;font-size: larger;'>" + data[x].Country+ "</li><li style='font-family: popins,sans-serif;left: 20px;top:20px;font-size: larger;'>" + data[x]. City + "</li><li style='font-family: popins,sans-serif;left: 20px;top:20px;font-size: larger;'>" + data[x].Openingdate + "</li><li style='font-family: popins,sans-serif;left: 20px;top:20px;font-size: larger;'>" + data[x].Closingdate + "</li><li style='font-family: popins,sans-serif;left: 20px;top:20px;font-size: larger;'>" + data[x].WorkEx + "</li></div><div style='width: 20%; height: 180px;float: right;background-color:white;''><h1 style='position: relative; top: 60px; left:-40px'><input type='hidden' id='t1' name='t1' value="+ data[x].CompanyName +"><input type='submit' value='Readmore'></h1 ></div ><hr></div><hr></form>"
+                    }
+
+                    document.getElementById("right").innerHTML = text;
+                }
+            }
+
+            xhttp.open("GET", "merge.json", true);
+
+            xhttp.send();
+        }
+    </script>
+</head>
+
+<body onload="view()">
+    <div id="header">
+        <h1>Jobseeker</h1>
+        <div id="ho"><a href="index.html">Home</a><a href="#">Menu</a><a href="#">About</a><a href="#">Service</a><a
+                href="#">Contact</a><a href="#"> </a></div>
+    </div>
+    <div id="maindiv">
+        <div id="border">
+            <div id="sm"></div>
+            <div id="small">  <a href="AfterloginJobseeker.html"><b class="b">My Profile</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="jobseekerupdate.html" ><b class="b">Edit Profile</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="searchnewjob.html"><b class="b">Search New Job</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="myjob.html"><b class="b">My Job</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="#" ><b class="b">Notification</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="#" ><b class="b">Menu1</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="#" ><b class="b">Menu2</b></a></div>
+            <div id="sm"></div>
+            <div id="small">  <a href="index.html" ><b class="b">Logout</b></a></div>
+            <div id="sm"></div>
+        </div>
+        <div id="right">
+        </div>
+    </div>
+    <div id="footer">
+        <div id="div1">Company
+            <span id="c">
+                <li><a href="#" id="c">About Us</a></li>
+                <li><a href="#" id="c">Contact</a></li>
+                <li><a href="#" id="c">Reservation</a></li>
+                <li><a href="#" id="c">Terms & Condation</a>
+                </li>
+        </div>
+        <div id="div2">Contact
+            <span id="co">
+                <li>123 et, New York, USA</li>
+                <li>+012 345 67890</li>
+                <li>info@example.com</li>
+            </span>
+        </div>
+        <div id="div3">Opening
+            <span id="op">
+                <li>Monday - Saturday</li>
+                <li>09AM - 09PM</li>
+                <li>Sunday</li>
+                <li>10AM - 08PM</li>
+            </span>
+        </div>
+        <div id="div4">Newsletter
+            <span id="ne"><br>Dolor amet sit justo amet elclita ipsum elest.</span>
+            <br>
+            <input type="email" placeholder="Enter the Email" id="fo">
+            <input type="submit" id="sub">
+        </div>
+    </div>
+</body>
+
+</html>

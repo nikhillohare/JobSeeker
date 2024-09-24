@@ -1,0 +1,14 @@
+#main
+{
+    position: relative;
+    height: 900px;
+    width: 100%;
+    background-color:cornsilk;
+}
+.input
+{
+    height: 20px;
+    width: 100px;
+border-color: blue;
+border-radius: 5%;
+}
